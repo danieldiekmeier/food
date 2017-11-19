@@ -1,0 +1,9 @@
+<div class="jumbotron">
+  Hi <%= current_user(@conn).name %>!
+</div>
+
+<ul>
+  <%= for recipe <- @recipes do %>
+    <li><%= recipe.name %></li>
+  <% end %>
+</ul>

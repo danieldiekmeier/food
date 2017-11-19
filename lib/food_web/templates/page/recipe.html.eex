@@ -1,0 +1,11 @@
+<h2><%= @recipe.name %></h2>
+
+<ul>
+  <%= for ingredient <- @recipe.ingredients do %>
+    <li><%= ingredient.name %>: <%= ingredient.amount %> <%= ingredient.unit %></li>
+  <% end %>
+</ul>
+
+<p>
+  <%= @recipe.best %> gibt es von <a href="https://losstopschade.de">Daniel Diekmeier</a>.
+</p>

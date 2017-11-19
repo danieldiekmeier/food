@@ -1,0 +1,9 @@
+<ul>
+  <%= for recipe <- @recipes do %>
+    <li>
+      <a href="<%= page_path(@conn, :show, recipe.slug) %>">
+        <%= recipe.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
