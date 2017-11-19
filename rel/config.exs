@@ -34,8 +34,8 @@ environment :dev do
 end
 
 environment :prod do
-  set include_erts: false
-  # set include_erts: "/Users/Daniel/dev/elixir/erlang-19.1/lib/erlang"
+  # set include_erts: false
+  set include_erts: "/Users/Daniel/dev/elixir/erlang-19.1/lib/erlang"
   set include_src: false
   set cookie: :"mq~xEwc39jFHnr}CiMG0@T|vj7aB?:s6ifiYeT?fugiV>X|)uWp53IZTMr(rSgWD"
 end

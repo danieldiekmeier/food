@@ -41,6 +41,8 @@ defmodule FoodWeb do
       import FoodWeb.ErrorHelpers
       import FoodWeb.Gettext
 
+      import Poison
+
       import FoodWeb.Session, only: [current_user: 1, logged_in?: 1]
     end
   end

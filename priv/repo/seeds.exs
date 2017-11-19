@@ -32,6 +32,13 @@ Food.Admin.create_recipe(%{
   slug: "waffeln",
   best: "Die besten Waffeln",
   ingredients: [
+    %{ name: "Butter", amount: 125, unit: "g" },
+    %{ name: "Zucker", amount: 70, unit: "g" },
+    %{ name: "Eier", amount: 2, unit: nil },
+    %{ name: "Mehl", amount: 175, unit: "g" },
+    %{ name: "Vanillezucker", amount: 0.5, unit: "Päckchen" },
+    %{ name: "Backpulver", amount: 0.25, unit: "Päckchen" },
+    %{ name: "Milch", amount: 100, unit: "ml" }
   ]
 })
 
@@ -40,7 +47,14 @@ Food.Admin.create_recipe(%{
   slug: "pfannkuchen",
   best: "Die besten Pfannkuchen",
   ingredients: [
+    %{ name: "Eier", amount: 1, unit: nil },
+    %{ name: "Mehl", amount: 133, unit: "g" },
+    %{ name: "Milch", amount: 250, unit: "ml" },
+    %{ name: "Salz", amount: 1, unit: "kleine Prise" },
+    %{ name: "Zucker", amount: 2, unit: "Esslöffel" },
+    %{ name: "Vanillezucker", amount: 1, unit: "Päckchen" },
+    %{ name: "Vanillearoma", amount: 1, unit: "Päckchen" }
   ]
 })
 
-# Food.Admin.create_user(%{name: "Daniel Diekmeier", email: "danieldiekmeier@gmail.com", password: "geheim420"})
+Food.Admin.create_user(%{name: "Daniel Diekmeier", email: "danieldiekmeier@gmail.com", password: "geheim420"})

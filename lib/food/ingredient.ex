@@ -5,8 +5,8 @@ defmodule Food.Ingredient do
 
 
   schema "ingredients" do
-    field :amount, :integer
     field :name, :string
+    field :amount, :float
     field :unit, :string
 
     # field :recipe_id, :integer

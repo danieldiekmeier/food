@@ -1,5 +1,14 @@
 <h2><%= @recipe.name %></h2>
 
+<script type="text/javascript">
+  var recipe = <%= {
+    :safe,
+    @recipe.ingredients
+    |> Enum.map(fn(i) -> Map.drop(i, [:__meta__, :recipe]) end)
+    |> Poison.encode!
+  } %>
+</script>
+
 <ul>
   <%= for ingredient <- @recipe.ingredients do %>
     <li><%= ingredient.name %>: <%= ingredient.amount %> <%= ingredient.unit %></li>
