@@ -8,7 +8,7 @@ export HOME=/home/danjel
 source $HOME/.bash_profile
 
 export MIX_ENV=prod
-export PORT=65472
+export PORT=65473
 export HOST="rezepte.danieldiekmeier.de"
 
 # Now let's go!
@@ -20,4 +20,8 @@ cd /home/danjel/food/assets
 ./node_modules/.bin/brunch build -p
 
 cd /home/danjel/food
-mix ecto.reset
+mix ecto.migrate
+mix run priv/repo/seeds.exs
+
+svc -du /home/danjel/service/food
+
