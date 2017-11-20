@@ -13,27 +13,16 @@ html {
 }
 
 body {
-  background-color #F4F4F4
+  background-color #fff
 
   font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
 }
 
 .Container {
-  width 100%
-  max-width 900px
-
-  margin-top 3rem
-  margin-left auto
-  margin-right auto
-  margin-bottom 3rem
-
-  background-color #fff
 }
 
 .Header {
-  padding 2rem
-  padding-top 1rem
-  padding-bottom 1rem
+  padding 1rem
 
   background-color #CA9368
 }
@@ -51,9 +40,15 @@ body {
 }
 
 .Content {
-  padding 2rem
-  padding-top 1rem
-  padding-bottom 1rem
+  width 100%
+  max-width 900px
+
+  margin-left auto
+  margin-right auto
+
+  padding 1rem
+  padding-top 2rem
+  padding-bottom 2rem
 
   color #292929
 }
@@ -82,6 +77,10 @@ body {
   grid-row-gap 1rem
 
   padding-left 0
+
+  @media (max-width: 500px) {
+    grid-template-columns 1fr
+  }
 }
 
 .Recipe {
@@ -89,22 +88,27 @@ body {
   align-items center
   justify-content center
 
-  min-height 6rem
+  min-height 5rem
 
   border-radius 6px
   background-color #ddd
 
   color inherit
+  font-size 1.5em
   font-weight bold
   text-decoration none
 }
 
 .Footer {
-  padding-top 1rem
-  padding-left 2rem
-  padding-right 2rem
+  width 100%
+  max-width 900px
 
-  background-color #F4F4F4
+  margin-left auto
+  margin-right auto
+
+  padding 1rem
+
+  border-top 1px solid #eee
 }
 
 .Footer-link {
