@@ -26,6 +26,10 @@
         </div>
       </main>
 
+      <footer class="footer">
+        <a href="http://losstopschade.de/impressum">Impressum</a>
+      </footer>
+
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
