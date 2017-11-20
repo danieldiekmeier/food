@@ -6,7 +6,9 @@
     @recipe.ingredients
     |> Enum.map(fn(i) -> Map.drop(i, [:__meta__, :recipe]) end)
     |> Poison.encode!
-  } %>
+  } %>;
+
+  window.RECIPE_SLUG = <%= { :safe, Poison.encode!(@recipe.slug) } %>
 </script>
 
 <ul>
