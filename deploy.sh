@@ -13,15 +13,32 @@ export HOST="rezepte.danieldiekmeier.de"
 
 # Now let's go!
 cd /home/danjel/food
-git pull
-mix phx.digest.clean
 
-cd /home/danjel/food/assets
-./node_modules/.bin/brunch build -p
+UPSTREAM=${1:-'@{u}'}
+LOCAL=$(git rev-parse @)
+REMOTE=$(git rev-parse "$UPSTREAM")
+BASE=$(git merge-base @ "$UPSTREAM")
 
-cd /home/danjel/food
-mix ecto.migrate
-mix run priv/repo/seeds.exs
+if [ $LOCAL = $REMOTE ]; then
+    echo "Up-to-date. No deploy needed."
 
-svc -du /home/danjel/service/food
+elif [ $LOCAL = $BASE ]; then
+    echo "Need to pull. "
+    git pull
+    mix phx.digest.clean
 
+    cd /home/danjel/food/assets
+    ./node_modules/.bin/brunch build -p
+
+    cd /home/danjel/food
+    mix ecto.migrate
+    mix run priv/repo/seeds.exs
+
+    svc -du /home/danjel/service/food
+
+elif [ $REMOTE = $BASE ]; then
+    echo "Need to push. Deploy aborted."
+
+else
+    echo "Diverged. Deploy aborted."
+fi
