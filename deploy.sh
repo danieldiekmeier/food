@@ -14,6 +14,8 @@ export HOST="rezepte.danieldiekmeier.de"
 # Now let's go!
 cd /home/danjel/food
 
+git remote update
+
 UPSTREAM=${1:-'@{u}'}
 LOCAL=$(git rev-parse @)
 REMOTE=$(git rev-parse "$UPSTREAM")
