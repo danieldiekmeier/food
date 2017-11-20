@@ -1,22 +1,25 @@
-<h2><%= @recipe.name %></h2>
+<div class="RecipeText">
+  <h2><%= @recipe.name %></h2>
 
-<script type="text/javascript">
-  var recipe = <%= {
-    :safe,
-    @recipe.ingredients
-    |> Enum.map(fn(i) -> Map.drop(i, [:__meta__, :recipe]) end)
-    |> Poison.encode!
-  } %>;
+  <script type="text/javascript">
+    var recipe = <%= {
+      :safe,
+      @recipe.ingredients
+      |> Enum.map(fn(i) -> Map.drop(i, [:__meta__, :recipe]) end)
+      |> Poison.encode!
+    } %>;
 
-  window.RECIPE_SLUG = <%= { :safe, Poison.encode!(@recipe.slug) } %>
-</script>
+    window.RECIPE_SLUG = <%= { :safe, Poison.encode!(@recipe.slug) } %>
+  </script>
 
-<ul>
-  <%= for ingredient <- @recipe.ingredients do %>
-    <li><%= ingredient.name %>: <%= format_amount(ingredient.amount) %> <%= ingredient.unit %></li>
-  <% end %>
-</ul>
+  <ul>
+    <%= for ingredient <- @recipe.ingredients do %>
+      <li><%= ingredient.name %>: <%= format_amount(ingredient.amount) %> <%= ingredient.unit %></li>
+    <% end %>
+  </ul>
 
-<p>
-  <%= @recipe.best %> gibt es von <a href="https://losstopschade.de">Daniel Diekmeier</a>.
-</p>
+  <p>
+    <%= @recipe.best %> gibt es von <a href="https://losstopschade.de">Daniel Diekmeier</a>.
+  </p>
+</div>
+
