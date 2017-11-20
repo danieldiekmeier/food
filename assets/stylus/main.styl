@@ -14,6 +14,8 @@ html {
 
 body {
   background-color #F4F4F4
+
+  font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
 }
 
 .Container {
@@ -53,6 +55,8 @@ body {
   padding-top 1rem
   padding-bottom 1rem
 
+  color #292929
+
   p,
   ul {
     margin-top 1rem
@@ -62,6 +66,33 @@ body {
       display none
     }
   }
+
+  ul {
+    padding-left 2rem
+    line-height 1.7
+  }
+}
+
+.Recipes {
+  display grid
+  grid-template-columns 1fr 1fr
+  grid-column-gap 1rem
+  grid-row-gap 1rem
+}
+
+.Recipe {
+  display flex
+  align-items center
+  justify-content center
+
+  min-height 6rem
+
+  border-radius 6px
+  background-color #ddd
+
+  color inherit
+  font-weight bold
+  text-decoration none
 }
 
 .Footer {
