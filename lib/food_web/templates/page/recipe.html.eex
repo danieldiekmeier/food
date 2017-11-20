@@ -13,7 +13,7 @@
 
 <ul>
   <%= for ingredient <- @recipe.ingredients do %>
-    <li><%= ingredient.name %>: <%= ingredient.amount %> <%= ingredient.unit %></li>
+    <li><%= ingredient.name %>: <%= format_amount(ingredient.amount) %> <%= ingredient.unit %></li>
   <% end %>
 </ul>
 
