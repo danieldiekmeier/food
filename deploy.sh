@@ -30,6 +30,7 @@ elif [ $LOCAL = $BASE ]; then
     mix phx.digest.clean
 
     cd /home/danjel/food/assets
+    npm install
     ./node_modules/.bin/brunch build -p
 
     cd /home/danjel/food
