@@ -1,6 +1,6 @@
 # Daniels Rezepte
 
-[http://rezepte.danieldiekmeier.de](rezepte.danieldiekmeier.de)
+[rezepte.danieldiekmeier.de](http://rezepte.danieldiekmeier.de)
 
 ## Installation
 
