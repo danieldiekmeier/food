@@ -32,8 +32,13 @@ defmodule FoodWeb.Router do
     get "/:slug", PageController, :show
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", FoodWeb do
-  #   pipe_through :api
-  # end
+  scope "/api" do
+    pipe_through :api
+
+    forward "/graphiql", Absinthe.Plug.GraphiQL,
+      schema: FoodWeb.Schema
+
+    forward "/", Absinthe.Plug,
+      schema: FoodWeb.Schema
+  end
 end

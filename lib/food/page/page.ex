@@ -15,6 +15,7 @@ defmodule Food.Page do
   """
   def list_recipes do
     Repo.all(Recipe)
+    |> Repo.preload(:ingredients)
   end
 
   def get_recipe!(slug) do
