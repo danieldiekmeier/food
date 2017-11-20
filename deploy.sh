@@ -27,13 +27,14 @@ if [ $LOCAL = $REMOTE ]; then
 elif [ $LOCAL = $BASE ]; then
     echo "Need to pull. "
     git pull
-    mix phx.digest.clean
 
     cd /home/danjel/food/assets
     npm install
     ./node_modules/.bin/brunch build -p
 
     cd /home/danjel/food
+    mix phx.digest.clean
+    mix phx.digest
     mix ecto.migrate
     mix run priv/repo/seeds.exs
 
