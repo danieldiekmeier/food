@@ -57,4 +57,4 @@ Food.Admin.create_recipe(%{
   ]
 })
 
-Food.Admin.create_user(%{name: "Daniel Diekmeier", email: "danieldiekmeier@gmail.com", password: "geheim420"})
+# Food.Admin.create_user(%{name: "Daniel Diekmeier", email: "danieldiekmeier@gmail.com", password: "geheim420"})
