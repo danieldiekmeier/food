@@ -14,7 +14,22 @@
   <body>
     <div class="Container">
       <header class="Header">
-        <h1 class="Header-headline"><a href="/">Daniels Rezepte</a></h1>
+        <h1 class="Header-headline">
+          <a href="/">
+            <img
+              src='<%= static_path(@conn, "/images/rezepte-logo-339.png") %>'
+              srcset='
+                <%= static_path(@conn, "/images/rezepte-logo-339.png") %> 339w,
+                <%= static_path(@conn, "/images/rezepte-logo-339@2x.png") %> 678w,
+                <%= static_path(@conn, "/images/rezepte-logo-864.png") %> 864w,
+                <%= static_path(@conn, "/images/rezepte-logo-864@2x.png") %> 1728w
+              '
+              sizes="(min-width: 900px) 864px, 100vw"
+              class="Header-logo"
+            >
+            <span>Daniels Rezepte</span>
+          </a>
+        </h1>
       </header>
 
       <main class="Content" role="main">
