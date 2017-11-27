@@ -1,6 +1,6 @@
-# Daniels Rezepte
+![](https://raw.githubusercontent.com/danieldiekmeier/food/master/assets/static/images/rezepte-logo-864.png)
 
-[rezepte.danieldiekmeier.de](https://rezepte.danieldiekmeier.de)
+Online hier: [rezepte.danieldiekmeier.de](https://rezepte.danieldiekmeier.de)
 
 ## Installation
 
