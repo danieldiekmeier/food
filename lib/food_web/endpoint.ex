@@ -51,7 +51,6 @@ defmodule FoodWeb.Endpoint do
       port = System.get_env("PORT") || raise "expected the PORT environment variable to be set"
       host = System.get_env("HOST") || raise "expected the HOST environment variable to be set"
 
-
       config = config
       |> Keyword.put(:http, [:inet6, port: port])
       |> Keyword.put(:url, [host: host, port: 80])

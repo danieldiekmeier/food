@@ -13,7 +13,7 @@
 //
 // If you no longer want to use a dependency, remember
 // to also remove its path from "config.paths.watched".
-import 'phoenix_html'
+// import 'phoenix_html'
 
 // Import local files
 //
@@ -21,36 +21,3 @@ import 'phoenix_html'
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
-
-if (window.RECIPE_SLUG) {
-  console.log(window.RECIPE_SLUG)
-
-  const body = {
-    query: `{
-      recipe(slug: "pizza") {
-        name,
-        ingredients {
-          name
-          amount
-          unit
-        }
-      }
-    }`,
-    variables: null,
-    operationName: null
-  }
-
-  const req = new Request('/api', {
-    method: 'POST',
-    body: JSON.stringify(body),
-    headers: new Headers({
-      'Content-Type': 'application/json'
-    })
-  })
-
-  fetch(req).then((response) => {
-    return response.json()
-  }).then((body) => {
-    console.log(body.data.recipe)
-  })
-}

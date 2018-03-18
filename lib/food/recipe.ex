@@ -10,8 +10,6 @@ defmodule Food.Recipe do
 
     has_many :ingredients, Food.Ingredient, on_delete: :delete_all
 
-    # field :ingredients, :map, virtual: true
-
     timestamps()
   end
 

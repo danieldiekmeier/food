@@ -34,11 +34,5 @@ defmodule FoodWeb.Router do
 
   scope "/api" do
     pipe_through :api
-
-    forward "/graphiql", Absinthe.Plug.GraphiQL,
-      schema: FoodWeb.Schema
-
-    forward "/", Absinthe.Plug,
-      schema: FoodWeb.Schema
   end
 end
