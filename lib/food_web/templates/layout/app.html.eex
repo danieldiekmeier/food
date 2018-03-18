@@ -8,7 +8,8 @@
     <meta name="author" content="">
 
     <title>Daniels Rezepte</title>
-    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link rel="stylesheet" href='<%= static_path(@conn, "/css/app.css") %>'>
+    <script src='<%= static_path(@conn, "/js/app.js") %>' defer></script>
   </head>
 
   <body>
@@ -44,6 +45,5 @@
       </footer>
 
     </div> <!-- /container -->
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
