@@ -17,6 +17,7 @@ Food.Admin.create_recipe(%{
   name: "Pizzateig",
   slug: "pizza",
   best: "Den besten Pizzateig",
+  instructions: "Ich backe die Pizza am liebsten für **8 bis 10 Minuten bei 290°C**, weil sie dann außen schön knusprig wird. Man bekommt aber auch bei 200°C schöne Ergebnisse, dann backe ich sie ein paar Minuten länger.",
   ingredients: [
     %{ name: "Wasser", amount: 125, unit: "ml" },
     %{ name: "Mehl", amount: 235, unit: "g" },
@@ -54,6 +55,21 @@ Food.Admin.create_recipe(%{
     %{ name: "Zucker", amount: 2, unit: "Esslöffel" },
     %{ name: "Vanillezucker", amount: 1, unit: "Päckchen" },
     %{ name: "Vanillearoma", amount: 1, unit: "Päckchen" }
+  ]
+})
+
+Food.Admin.create_recipe(%{
+  name: "Käsekuchen (ohne Mehl)",
+  slug: "kaesekuchen",
+  best: "Den besten Käsekuchen",
+  instructions: "Bei 150°C etwa 50 Minuten backen.",
+  ingredients: [
+    %{ name: "Quark", amount: 1000, unit: "g" },
+    %{ name: "weiche Butter", amount: 200, unit: "g" },
+    %{ name: "Eier", amount: 4, unit: nil },
+    %{ name: "Vanillezucker", amount: 2, unit: "Päckchen" },
+    %{ name: "Zucker", amount: 200, unit: "g" },
+    %{ name: "Puddingpulver mit Vanillegeschmack", amount: 1, unit: "Packung" }
   ]
 })
 

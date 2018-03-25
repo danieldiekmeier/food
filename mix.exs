@@ -44,7 +44,8 @@ defmodule Food.Mixfile do
       {:comeonin, "~> 4.0"},
       {:argon2_elixir, "~> 1.2"},
       {:mix_test_watch, "~> 0.3", only: [:dev, :test], runtime: false},
-      {:distillery, "~> 1.5", runtime: false}
+      {:distillery, "~> 1.5", runtime: false},
+      {:earmark, "~> 1.0.1"}
     ]
   end
 

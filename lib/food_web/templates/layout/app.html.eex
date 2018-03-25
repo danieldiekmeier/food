@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Daniels Rezepte</title>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Die besten Rezepte, die man ständig braucht.">
+    <meta name="author" content="Daniel Diekmeier">
 
-    <title>Daniels Rezepte</title>
     <link rel="stylesheet" href='<%= static_path(@conn, "/css/app.css") %>'>
     <script src='<%= static_path(@conn, "/js/app.js") %>' defer></script>
   </head>
@@ -31,6 +32,10 @@
             <span>Daniels Rezepte</span>
           </a>
         </h1>
+
+        <div class="Header-best">
+          Die besten Rezepte gibt es von <a href="https://losstopschade.de">Daniel Diekmeier</a>
+        </div>
       </header>
 
       <main class="Content" role="main">
@@ -41,7 +46,7 @@
       </main>
 
       <footer class="Footer">
-        <a href="http://losstopschade.de/impressum" class="Footer-link">Impressum</a>
+        <a href="https://losstopschade.de/impressum" class="Footer-link">Impressum</a>
       </footer>
 
     </div> <!-- /container -->

@@ -18,6 +18,12 @@
     <% end %>
   </ul>
 
+  <%= if @recipe.instructions do %>
+    <p>
+      <%= @recipe.instructions |> markdown %>
+    </p>
+  <% end %>
+
   <p>
     <%= @recipe.best %> gibt es von <a href="https://losstopschade.de">Daniel Diekmeier</a>.
   </p>

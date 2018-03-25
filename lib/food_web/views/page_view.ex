@@ -1,6 +1,12 @@
 defmodule FoodWeb.PageView do
   use FoodWeb, :view
 
+  def markdown(body) do
+    body
+    |> Earmark.to_html
+    |> raw
+  end
+
   def format_amount(amount) do
     rounded = Float.round(amount)
 

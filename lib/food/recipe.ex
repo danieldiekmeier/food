@@ -7,6 +7,7 @@ defmodule Food.Recipe do
     field :name, :string
     field :slug, :string
     field :best, :string
+    field :instructions, :string
 
     has_many :ingredients, Food.Ingredient, on_delete: :delete_all
 
@@ -16,7 +17,7 @@ defmodule Food.Recipe do
   @doc false
   def changeset(%Recipe{} = recipe, attrs) do
     recipe
-    |> cast(attrs, [:name, :slug, :best])
+    |> cast(attrs, [:name, :slug, :best, :instructions])
     |> validate_required([:name, :slug, :best])
   end
 
