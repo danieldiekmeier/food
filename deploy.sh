@@ -33,6 +33,7 @@ elif [ $LOCAL = $BASE ]; then
     ./node_modules/.bin/brunch build -p
 
     cd /home/danjel/food
+    mix deps.get
     mix phx.digest.clean
     mix phx.digest
     mix ecto.migrate
