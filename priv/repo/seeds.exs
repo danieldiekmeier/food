@@ -22,7 +22,7 @@ Food.Admin.create_recipe(%{
     %{ name: "Wasser", amount: 125, unit: "ml" },
     %{ name: "Mehl", amount: 235, unit: "g" },
     %{ name: "Hefe", amount: 10, unit: "g" },
-    %{ name: "Salz", amount: 7, unit: "g" },
+    %{ name: "Salz", amount: 4, unit: "g" },
     %{ name: "Olivenöl", amount: 10, unit: "ml" },
     %{ name: "Zucker", amount: 1, unit: "kleine Prise" }
   ]
