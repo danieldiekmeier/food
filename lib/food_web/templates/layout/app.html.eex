@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <title>Daniels Rezepte</title>
 
@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Die besten Rezepte, die man ständig braucht.">
     <meta name="author" content="Daniel Diekmeier">
+
+    <link rel="shortcut icon" type="image/x-icon" href="<%= static_path(@conn, "/favicon.ico") %>">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= static_path(@conn, "/images/apple-touch-icon.png") %>">
 
     <link rel="stylesheet" href='<%= static_path(@conn, "/css/app.css") %>'>
     <script src='<%= static_path(@conn, "/js/app.js") %>' defer></script>
