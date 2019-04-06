@@ -13,6 +13,8 @@ defmodule FoodWeb.PageView do
     case amount do
       amount when amount == rounded ->
         Kernel.trunc(amount)
+      0.75 ->
+        "¾"
       0.5 ->
         "½"
       0.25 ->
