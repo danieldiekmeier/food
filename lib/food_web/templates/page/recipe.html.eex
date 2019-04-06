@@ -1,20 +1,33 @@
 <div class="RecipeText">
-  <h2><%= @recipe.name %></h2>
+  <h2>
+    <%= @recipe.name %>
 
-  <script type="text/javascript">
-    var recipe = <%= {
-      :safe,
-      @recipe.ingredients
-      |> Enum.map(fn(i) -> Map.drop(i, [:__meta__, :recipe]) end)
-      |> Poison.encode!
-    } %>;
+    <%= if @times > 1 do %>
+      &times; <%= @times %>
+    <% end %>
 
-    window.RECIPE_SLUG = <%= { :safe, Poison.encode!(@recipe.slug) } %>
-  </script>
+    <small style="padding-left: 0.5rem; font-weight: normal; font-size: 1rem;">
+      <%= if @times > 1 do %>
+        <a
+          href="<%= page_path(@conn, :show, @recipe.slug, times: @times - 1) %>"
+        >
+          -1
+        </a>
+
+        /
+      <% end %>
+
+      <a
+        href="<%= page_path(@conn, :show, @recipe.slug, times: @times + 1) %>"
+      >
+        +1
+      </a>
+    </small>
+  </h2>
 
   <ul>
     <%= for ingredient <- @recipe.ingredients do %>
-      <li><%= ingredient.name %>: <%= format_amount(ingredient.amount) %> <%= ingredient.unit %></li>
+      <li><%= ingredient.name %>: <%= format_amount(ingredient.amount * @times) %> <%= ingredient.unit %></li>
     <% end %>
   </ul>
 
@@ -23,9 +36,5 @@
       <%= @recipe.instructions |> markdown %>
     </p>
   <% end %>
-
-  <p>
-    <%= @recipe.best %> gibt es von <a href="https://losstopschade.de">Daniel Diekmeier</a>.
-  </p>
 </div>
 
