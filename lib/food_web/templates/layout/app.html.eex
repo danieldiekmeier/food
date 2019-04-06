@@ -38,7 +38,13 @@
         </h1>
 
         <div class="Header-best">
-          Die besten Rezepte gibt es von <a href="https://losstopschade.de">Daniel Diekmeier</a>
+          <%= if assigns[:recipe] do %>
+            <%= @recipe.best %>
+          <% else %>
+            Die besten Rezepte
+          <% end %>
+
+          gibt es von <a href="https://losstopschade.de">Daniel Diekmeier</a>
         </div>
       </header>
 
