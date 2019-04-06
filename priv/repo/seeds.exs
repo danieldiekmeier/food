@@ -73,4 +73,64 @@ Food.Admin.create_recipe(%{
   ]
 })
 
+Food.Admin.create_recipe(%{
+  name: "Zimtmuffins",
+  slug: "zimtmuffins",
+  best: "Die besten Zimtmuffins",
+  instructions: """
+    Backofen auf 190°C vorheizen.
+
+    Mehl, Backpulver und Vanillezucker vermischen.
+
+    Geschmolzene Butter mit 100g Zucker, Ei, Sahne und Milch vermengen.
+
+    Trockene und nasse Zutaten zusammenfügen.
+
+    In Förmchen geben.
+
+    20 Minuten bei 190°C backen.
+    """,
+  ingredients: [
+    %{ name: "Mehl", amount: 240, unit: "g" },
+    %{ name: "Backpulver", amount: 2, unit: "Teelöffel" },
+    %{ name: "Vanillezucker", amount: 1, unit: "Päckchen" },
+    %{ name: "Geschmolzene Butter", amount: 80, unit: "g" },
+    %{ name: "Zucker", amount: 100, unit: "g" },
+    %{ name: "Ei", amount: 1, unit: nil },
+    %{ name: "Saure Sahne", amount: 110, unit: "g" },
+    %{ name: "Milch", amount: 60, unit: "ml" },
+    %{ name: "Zimt", amount: 1, unit: " Esslöffel" }
+  ]
+})
+
+Food.Admin.create_recipe(%{
+  name: "Naan",
+  slug: "naan",
+  best: "Das beste Naan",
+  instructions: """
+    Das lauwarme Wasser in eine Schüssel geben und mit der Hefe und 1 Teelöffel Zucker bestreuen. Für 10-15 Minuten stehen lassen, bis es schaumig wird.
+
+    In einer größeren Schüssel Mehl, restlichen Zucker, 1/2 Teelöffel Salz und Backpulver zusammengeben.
+
+    Vermischen, dann eine Kuhle in der Mitte formen und die geschmolzene Butter, Joghurt, Schwarzkümmel und die Hefemischung hineingeben.
+
+    Das ganze gut durchkneten. Es sollte ein sehr weicher Teig sein, aber sich trotzdem zu einem Ball formen lassen.
+
+    In einer großen Schüssel für etwa eine Stunde gehen lassen, bis sich die Größe verdoppelt hat.
+
+    Mit Mehl flach ausrollen und in einer Pfanne von beiden Seiten ohne Öl braten. Anschließend mit Öl bestreichen (Olivenöl klappt gut).
+    """,
+  ingredients: [
+    %{ name: "Trockenhefe", amount: 7, unit: "g" },
+    %{ name: "Lauwarmes Wasser", amount: 125, unit: "ml" },
+    %{ name: "Salz", amount: 0.5, unit: "Teelöffel" },
+    %{ name: "Brauner Zucker", amount: 2, unit: "Teelöffel" },
+    %{ name: "Mehl", amount: 300, unit: "g" },
+    %{ name: "Backpulver", amount: 0.5, unit: "Teelöffel" },
+    %{ name: "Geschmolzene Butter", amount: 25, unit: "g" },
+    %{ name: "Naturjoghurt", amount: 150, unit: "ml" },
+    %{ name: "Schwarzkümmel", amount: 1, unit: "Esslöffel" }
+  ]
+})
+
 # Food.Admin.create_user(%{name: "Daniel Diekmeier", email: "danieldiekmeier@gmail.com", password: "geheim420"})
