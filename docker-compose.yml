@@ -1,0 +1,10 @@
+version: '3'
+services:
+  food:
+    image: postgres:11.1
+    container_name: food_postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+    ports:
+      - '5432:5432'
