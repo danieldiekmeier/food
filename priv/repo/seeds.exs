@@ -132,5 +132,3 @@ Food.Admin.create_recipe(%{
     %{ name: "Schwarzkümmel", amount: 1, unit: "Esslöffel" }
   ]
 })
-
-# Food.Admin.create_user(%{name: "Daniel Diekmeier", email: "danieldiekmeier@gmail.com", password: "geheim420"})
