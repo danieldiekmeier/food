@@ -8,7 +8,7 @@ export HOME=/home/danjel
 source $HOME/.bash_profile
 
 export MIX_ENV=prod
-export PORT=65473
+export PORT=4001
 export HOST="rezepte.danieldiekmeier.de"
 
 # Now let's go!
@@ -39,7 +39,7 @@ elif [ $LOCAL = $BASE ]; then
     mix ecto.migrate
     mix run priv/repo/seeds.exs
 
-    svc -du /home/danjel/service/food
+    supervisorctl restart food
 
 elif [ $REMOTE = $BASE ]; then
     echo "Need to push. Deploy aborted."
