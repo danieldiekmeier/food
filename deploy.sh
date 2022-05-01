@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # These environment variables are sometimes needed by the running daemons
-export USER=danjel
-export HOME=/home/danjel
+export USER=danjel7
+export HOME=/home/danjel7
 
 # Include the user-specific profile
 source $HOME/.bash_profile
@@ -12,7 +12,7 @@ export PORT=4001
 export HOST="rezepte.danieldiekmeier.de"
 
 # Now let's go!
-cd /home/danjel/food
+cd /home/danjel7/food
 
 git remote update
 
