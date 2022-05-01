@@ -1,0 +1,25 @@
+.RecipeText {
+  color: var(--c-text);
+}
+
+.RecipeText a {
+  color: inherit;
+  border-bottom: 1px dotted var(--c-base-light);
+  text-decoration: none;
+}
+
+.RecipeText p,
+.RecipeText ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.RecipeText p:empty,
+.RecipeText ul:empty {
+  display: none;
+}
+
+.RecipeText ul {
+  padding-left: 2rem;
+  line-height: 1.7;
+}

@@ -1,0 +1,15 @@
+@import 'base/normalize';
+@import 'base/basic';
+@import 'components/Content';
+@import 'components/Footer';
+@import 'components/Header';
+@import 'components/Recipe';
+@import 'components/RecipeText';
+
+:root {
+  --c-base: #5B820E;
+  --c-base-dark: #49680b;
+  --c-base-light: #679310;
+  --c-text: #43561d;
+  --c-background: #ffffff;
+}

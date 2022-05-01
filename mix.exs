@@ -48,7 +48,8 @@ defmodule Food.Mixfile do
       {:argon2_elixir, "~> 1.2"},
       {:mix_test_watch, "~> 0.3", only: [:dev, :test], runtime: false},
       {:distillery, "~> 1.5", runtime: false},
-      {:earmark, "~> 1.0.1"}
+      {:earmark, "~> 1.0.1"},
+      {:esbuild, "~> 0.4", runtime: Mix.env() == :dev},
     ]
   end
 
@@ -60,6 +61,7 @@ defmodule Food.Mixfile do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
+      "assets.deploy": ["esbuild default --minify", "phx.digest"],
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       "test.reset": ["ecto.drop", "ecto.create", "ecto.migrate"],

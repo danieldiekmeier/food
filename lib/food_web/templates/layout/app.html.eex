@@ -13,8 +13,8 @@
 
     <link rel="apple-touch-icon" sizes="180x180" href="<%= Routes.static_path(@conn, "/images/apple-touch-icon.png") %>">
 
-    <link rel="stylesheet" href='<%= Routes.static_path(@conn, "/css/app.css") %>'>
-    <script src='<%= Routes.static_path(@conn, "/js/app.js") %>' defer></script>
+    <link rel="stylesheet" href='<%= Routes.static_path(@conn, "/assets/app.css") %>'>
+    <script src='<%= Routes.static_path(@conn, "/assets/app.js") %>' defer></script>
   </head>
 
   <body>

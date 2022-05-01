@@ -28,14 +28,11 @@ elif [ $LOCAL = $BASE ]; then
     echo "Need to pull. "
     git pull
 
-    cd /home/danjel/food/assets
-    npm install
-    ./node_modules/.bin/brunch build -p
+    npm --prefix assets install
 
-    cd /home/danjel/food
     mix deps.get
     mix phx.digest.clean
-    mix phx.digest
+    mix assets.deploy
     mix ecto.migrate
     mix run priv/repo/seeds.exs
 

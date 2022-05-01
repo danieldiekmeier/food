@@ -1,0 +1,14 @@
+.Content {
+  width: 100%;
+  max-width: 900px;
+
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  color: #292929;
+}

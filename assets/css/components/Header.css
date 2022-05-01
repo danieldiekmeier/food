@@ -1,0 +1,43 @@
+.Header {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.Header-headline {
+  margin: 0;
+  color: var(--c-base);
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.Header-headline a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.Header-headline span {
+  display: none;
+}
+
+.Header-logo {
+  display: block;
+  max-width: 100%;
+}
+
+.Header-best {
+  padding-top: 1em;
+  text-align: center;
+  color: var(--c-base-dark);
+}
+
+.Header-best a {
+  border-bottom: 1px dotted var(--c-base-light);
+  color: inherit;
+  text-decoration: none;
+}
