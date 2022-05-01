@@ -51,9 +51,9 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :food, Food.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "example",
-  database: "postgres",
+  username: "daniel",
+  password: "",
+  database: "food_dev",
   hostname: "localhost",
   pool_size: 10
 

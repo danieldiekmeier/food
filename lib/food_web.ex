@@ -21,7 +21,7 @@ defmodule FoodWeb do
     quote do
       use Phoenix.Controller, namespace: FoodWeb
       import Plug.Conn
-      import FoodWeb.Router.Helpers
+      alias FoodWeb.Router.Helpers, as: Routes
       import FoodWeb.Gettext
     end
   end
@@ -37,11 +37,9 @@ defmodule FoodWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import FoodWeb.Router.Helpers
+      alias FoodWeb.Router.Helpers, as: Routes
       import FoodWeb.ErrorHelpers
       import FoodWeb.Gettext
-
-      import Poison
 
       import FoodWeb.Session, only: [current_user: 1, logged_in?: 1]
     end

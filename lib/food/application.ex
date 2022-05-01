@@ -8,6 +8,8 @@ defmodule Food.Application do
 
     # Define workers and child supervisors to be supervised
     children = [
+      # Start the PubSub system
+      {Phoenix.PubSub, name: Food.PubSub},
       # Start the Ecto repository
       supervisor(Food.Repo, []),
       # Start the endpoint when the application starts

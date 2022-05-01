@@ -1,5 +1,5 @@
 defmodule Food.Repo do
-  use Ecto.Repo, otp_app: :food
+  use Ecto.Repo, otp_app: :food, adapter: Ecto.Adapters.Postgres
 
   @doc """
   Dynamically loads the repository url from the

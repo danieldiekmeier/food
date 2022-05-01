@@ -9,12 +9,12 @@
     <meta name="description" content="Die besten Rezepte, die man ständig braucht.">
     <meta name="author" content="Daniel Diekmeier">
 
-    <link rel="shortcut icon" type="image/x-icon" href="<%= static_path(@conn, "/favicon.ico") %>">
+    <link rel="shortcut icon" type="image/x-icon" href="<%= Routes.static_path(@conn, "/favicon.ico") %>">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="<%= static_path(@conn, "/images/apple-touch-icon.png") %>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= Routes.static_path(@conn, "/images/apple-touch-icon.png") %>">
 
-    <link rel="stylesheet" href='<%= static_path(@conn, "/css/app.css") %>'>
-    <script src='<%= static_path(@conn, "/js/app.js") %>' defer></script>
+    <link rel="stylesheet" href='<%= Routes.static_path(@conn, "/css/app.css") %>'>
+    <script src='<%= Routes.static_path(@conn, "/js/app.js") %>' defer></script>
   </head>
 
   <body>
@@ -23,12 +23,12 @@
         <h1 class="Header-headline">
           <a href="/">
             <img
-              src='<%= static_path(@conn, "/images/rezepte-logo-339.png") %>'
+              src='<%= Routes.static_path(@conn, "/images/rezepte-logo-339.png") %>'
               srcset='
-                <%= static_path(@conn, "/images/rezepte-logo-339.png") %> 339w,
-                <%= static_path(@conn, "/images/rezepte-logo-339@2x.png") %> 678w,
-                <%= static_path(@conn, "/images/rezepte-logo-864.png") %> 864w,
-                <%= static_path(@conn, "/images/rezepte-logo-864@2x.png") %> 1728w
+                <%= Routes.static_path(@conn, "/images/rezepte-logo-339.png") %> 339w,
+                <%= Routes.static_path(@conn, "/images/rezepte-logo-339@2x.png") %> 678w,
+                <%= Routes.static_path(@conn, "/images/rezepte-logo-864.png") %> 864w,
+                <%= Routes.static_path(@conn, "/images/rezepte-logo-864@2x.png") %> 1728w
               '
               sizes="(min-width: 900px) 864px, 100vw"
               class="Header-logo"

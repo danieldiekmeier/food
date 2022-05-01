@@ -1,6 +1,6 @@
 <ul class="Recipes">
   <%= for recipe <- @recipes do %>
-    <a href="<%= page_path(@conn, :show, recipe.slug) %>" class="Recipe">
+    <a href="<%= Routes.page_path(@conn, :show, recipe.slug) %>" class="Recipe">
       <%= recipe.name %>
     </a>
   <% end %>

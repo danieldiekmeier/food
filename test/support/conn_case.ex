@@ -18,8 +18,9 @@ defmodule FoodWeb.ConnCase do
   using do
     quote do
       # Import conveniences for testing with connections
-      use Phoenix.ConnTest
-      import FoodWeb.Router.Helpers
+      import Plug.Conn
+      import Phoenix.ConnTest
+      alias FoodWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
       @endpoint FoodWeb.Endpoint

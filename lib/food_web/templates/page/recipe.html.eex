@@ -9,7 +9,7 @@
     <small style="padding-left: 0.5rem; font-weight: normal; font-size: 1rem;">
       <%= if @times > 1 do %>
         <a
-          href="<%= page_path(@conn, :show, @recipe.slug, times: @times - 1) %>"
+          href="<%= Routes.page_path(@conn, :show, @recipe.slug, times: @times - 1) %>"
         >
           -1
         </a>
@@ -18,7 +18,7 @@
       <% end %>
 
       <a
-        href="<%= page_path(@conn, :show, @recipe.slug, times: @times + 1) %>"
+        href="<%= Routes.page_path(@conn, :show, @recipe.slug, times: @times + 1) %>"
       >
         +1
       </a>
@@ -37,4 +37,3 @@
     </p>
   <% end %>
 </div>
-
