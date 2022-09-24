@@ -9,9 +9,10 @@ defmodule FoodWeb.PageController do
   def show(conn, %{"slug" => slug}) do
     recipe = Food.Page.get_recipe!(slug)
 
-    times = conn.query_params
-    |> Map.get("times", "1")
-    |> String.to_integer
+    times =
+      fetch_query_params(conn).query_params
+      |> Map.get("times", "1")
+      |> String.to_integer()
 
     render(conn, "recipe.html", recipe: recipe, times: times)
   end
