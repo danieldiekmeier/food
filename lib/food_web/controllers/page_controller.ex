@@ -2,8 +2,8 @@ defmodule FoodWeb.PageController do
   use FoodWeb, :controller
 
   def index(conn, _params) do
-    recipes = Food.Page.list_recipes
-    render conn, "index.html", recipes: recipes
+    recipes = Food.Page.list_recipes()
+    render(conn, "index.html", recipes: recipes)
   end
 
   def show(conn, %{"slug" => slug}) do
@@ -13,6 +13,6 @@ defmodule FoodWeb.PageController do
     |> Map.get("times", "1")
     |> String.to_integer
 
-    render conn, "recipe.html", recipe: recipe, times: times
+    render(conn, "recipe.html", recipe: recipe, times: times)
   end
 end
